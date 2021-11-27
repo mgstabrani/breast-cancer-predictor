@@ -190,7 +190,6 @@
                 (attribute ?attribute)
                 (text ?text))
     (not (av (parent_attribute $?parent_attribute) (attribute ?attribute)))
-    ; (not (and (question (attribute ?attribute2&~?attribute))))
     =>
     (bind ?value (ask-question ?text))
     (assert (av (parent_attribute $?parent_attribute) (attribute ?attribute)
